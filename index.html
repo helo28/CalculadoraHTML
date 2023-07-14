@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--CRIANDO DUAS CAIXAS QUE CONTAM CONFORME APERTA DA SETA-->
+    <input type="number" class="n1"> <br>  <!-- O TIPO DESSA VÁRIAVEL VAI SER NUMERICA POR ISSO O NUMBER-->
+    <br>
+    <input type="number" class="n2"><br><br>
+
+    <!-- ADICIONANDO AS IMAGENS-->
+    <img src="img/add.png" onclick="soma()">
+    <img src="img/menos.png" onclick="sub()">
+    <img src="img/x.png" onclick="mult()">
+    <img src="img/divi.png" onclick="div()"> <br>
+
+    <!-- VÁRIAVEL DO RESULTADO-->
+    <input type="text" class="resultado">
+
+    <script>
+        function soma() {
+            let n1 = Number(document.querySelector('.n1').value) // ESSE QUERYSELECTOR É TIPO UM GET, SERVE PARA PEGAR ALGO
+            let n2 = Number(document.querySelector('.n2').value) // VALUE SERVE PARA PEGAR OS NÚMEROS O NUMBER É PARA CONVERSÃO
+            let result = document.querySelector('.resultado')
+            //alert("soma"); // SERVE PARA MOSTRAR UM ALERTA DE TESTE DE FUNCIONAMENTO
+            result.value = (n1+n2) // CONTA DO RESULTADO
+        }
+
+        function sub() {
+            let n1 = Number(document.querySelector('.n1').value) // ESSE QUERYSELECTOR É TIPO UM GET, SERVE PARA PEGAR ALGO
+            let n2 = Number(document.querySelector('.n2').value) // VALUE SERVE PARA PEGAR OS NÚMEROS
+            let result = document.querySelector('.resultado')
+           
+            result.value = (n1-n2)
+        }
+
+        function mult() {
+            let n1 = Number(document.querySelector('.n1').value) // ESSE QUERYSELECTOR É TIPO UM GET, SERVE PARA PEGAR ALGO
+            let n2 = Number(document.querySelector('.n2').value) // VALUE SERVE PARA PEGAR OS NÚMEROS
+            let result = document.querySelector('.resultado')
+            
+            result.value = (n1*n2)
+        }
+
+        function div() {
+            let n1 = Number(document.querySelector('.n1').value) // ESSE QUERYSELECTOR É TIPO UM GET, SERVE PARA PEGAR ALGO
+            let n2 = Number(document.querySelector('.n2').value) // VALUE SERVE PARA PEGAR OS NÚMEROS
+            let result = document.querySelector('.resultado')
+            
+            result.value = (n1/n2)
+        }
+    </script>
+
+    
+</body>
+</html>
